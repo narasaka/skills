@@ -18,13 +18,6 @@ npx skills add narasaka/skills --skill dotenvx
 |-------|-------------|
 | [dotenvx](./skills/dotenvx/) | Authoritative CLI reference for [dotenvx](https://dotenvx.com) — encrypt .env files, inject env vars into any process, manage multi-environment secrets, and configure CI/CD pipelines with encrypted env files. |
 | [attach-media-to-pr](./skills/attach-media-to-pr/) | Screenshot the UI a PR changes at the right viewports and attach the images to the PR. |
-
-## Adapted from tstack
-
-These started as [Theo Browne](https://github.com/t3dotgg)'s skills from [t3dotgg/tstack](https://github.com/t3dotgg/tstack), edited to fit my workflow. They're used under the MIT license, and each folder keeps a copy of it.
-
-| Skill | Description |
-|-------|-------------|
 | [full-send](./skills/full-send/) | Say "full send" to hand off a task end to end: prove the change, review it with `sol-loop`, file the PR, babysit it, and merge once the merge gate passes. |
 | [full-stop](./skills/full-stop/) | Same as `full-send`, but stops with the PR ready for you to merge. Never merges. |
 | [file-pr](./skills/file-pr/) | File a concise PR: human-readable title, a description that leads with the problem, no AI attribution. |
@@ -35,9 +28,9 @@ These started as [Theo Browne](https://github.com/t3dotgg)'s skills from [t3dotg
 | [modernize](./skills/modernize/) | Bring an old PR up to date: check whether the idea still belongs, then rebase, rework, or recommend closing it. |
 | [takeover](./skills/takeover/) | Take over a PR, branch, or agent thread and finish it while keeping the original contributors' credit. |
 
-## Skills I use from elsewhere
+## Other skills I use
 
-Other people wrote these, so they're linked here rather than copied. Install them from their own repos:
+These belong to other people, so install them from their own repos:
 
 | Skill | Source | Install |
 |-------|--------|---------|
@@ -53,3 +46,36 @@ Other people wrote these, so they're linked here rather than copied. Install the
 | wizard | [mattpocock/skills](https://github.com/mattpocock/skills) | `npx skills add mattpocock/skills --skill wizard` |
 | writing-for-agents | [mattpocock/skills](https://github.com/mattpocock/skills) | `npx skills add mattpocock/skills --skill writing-for-agents` |
 | resolving-merge-conflicts | [mattpocock/skills](https://github.com/mattpocock/skills/tree/153fc1b93de6584562765cdce299324e1ff9e661/skills/engineering/resolving-merge-conflicts) | Removed upstream; the link points to the last version. |
+
+## Credits
+
+`full-send`, `full-stop`, `file-pr`, `babysit-pr`, `council`, `sol-loop`, `leaving-pr-comments`, `modernize` and `takeover` are adapted from [Theo Browne](https://github.com/t3dotgg)'s [tstack](https://github.com/t3dotgg/tstack), used under the MIT license:
+
+<details>
+<summary>tstack license</summary>
+
+```
+MIT License
+
+Copyright (c) 2026 Theo Browne
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+</details>
