@@ -17,6 +17,14 @@ npx skills add narasaka/skills --skill dotenvx
 | Skill | Description |
 |-------|-------------|
 | [dotenvx](./skills/dotenvx/) | Authoritative CLI reference for [dotenvx](https://dotenvx.com) — encrypt .env files, inject env vars into any process, manage multi-environment secrets, and configure CI/CD pipelines with encrypted env files. |
+| [attach-media-to-pr](./skills/attach-media-to-pr/) | Screenshot the UI a PR changes at the right viewports and attach the images to the PR. |
+
+## Adapted from tstack
+
+These started as [Theo Browne](https://github.com/t3dotgg)'s skills from [t3dotgg/tstack](https://github.com/t3dotgg/tstack), edited to fit my workflow. They're used under the MIT license, and each folder keeps a copy of it.
+
+| Skill | Description |
+|-------|-------------|
 | [full-send](./skills/full-send/) | Say "full send" to hand off a task end to end: prove the change, review it with `sol-loop`, file the PR, babysit it, and merge once the merge gate passes. |
 | [full-stop](./skills/full-stop/) | Same as `full-send`, but stops with the PR ready for you to merge. Never merges. |
 | [file-pr](./skills/file-pr/) | File a concise PR: human-readable title, a description that leads with the problem, no AI attribution. |
@@ -24,7 +32,6 @@ npx skills add narasaka/skills --skill dotenvx
 | [council](./skills/council/) | Say "council" to get three reviewers from two providers (GPT-6.1 Sol, GPT-6 Astra, Claude Fable 5.2), scored per round until all are satisfied. |
 | [sol-loop](./skills/sol-loop/) | Say "sol loop" to review a change with GPT Sol in a bounded loop, keeping fixes minimal and scope tight. |
 | [leaving-pr-comments](./skills/leaving-pr-comments/) | Rules for GitHub comments posted on your behalf: your voice, no attribution, conclusion first. |
-| [attach-media-to-pr](./skills/attach-media-to-pr/) | Screenshot the UI a PR changes at the right viewports and attach the images to the PR. |
 | [modernize](./skills/modernize/) | Bring an old PR up to date: check whether the idea still belongs, then rebase, rework, or recommend closing it. |
 | [takeover](./skills/takeover/) | Take over a PR, branch, or agent thread and finish it while keeping the original contributors' credit. |
 
