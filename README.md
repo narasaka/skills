@@ -17,7 +17,9 @@ npx skills add narasaka/skills --skill dotenvx
 | Skill | Description |
 |-------|-------------|
 | [dotenvx](./skills/dotenvx/) | Authoritative CLI reference for [dotenvx](https://dotenvx.com) — encrypt .env files, inject env vars into any process, manage multi-environment secrets, and configure CI/CD pipelines with encrypted env files. |
-| [attach-media-to-pr](./skills/attach-media-to-pr/) | Screenshot the UI a PR changes at the right viewports and attach the images to the PR. |
+| [screenshots](./skills/screenshots/) | Screenshot UI work at desktop and mobile and show it in chat, or attach it to the PR as one current set. |
+| [ticket](./skills/ticket/) | Start a Linear ticket on its Linear branch, solve the problem rather than the ticket's proposed fix, and ship with `full-stop`. |
+| [weigh-comments](./skills/weigh-comments/) | Check a teammate's review comments against the code, give each a verdict, and draft replies for you to send. |
 | [full-send](./skills/full-send/) | Say "full send" to hand off a task end to end: prove the change, review it with `sol-loop`, file the PR, babysit it, and merge once the merge gate passes. |
 | [full-stop](./skills/full-stop/) | Same as `full-send`, but stops with the PR ready for you to merge. Never merges. |
 | [file-pr](./skills/file-pr/) | File a concise PR: human-readable title, a description that leads with the problem, no AI attribution. |
