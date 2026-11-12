@@ -24,6 +24,7 @@ npx skills add narasaka/skills --skill dotenvx
 | [full-stop](./skills/full-stop/) | Same as `full-send`, but stops with the PR ready for you to merge. Never merges. |
 | [file-pr](./skills/file-pr/) | File a concise PR: human-readable title, a description that leads with the problem, no AI attribution. |
 | [babysit-pr](./skills/babysit-pr/) | Watch a PR through CI and review bots, fix real findings, and dismiss false positives with reasons. Ships `pr-wait`, a single-PR event watcher. |
+| [orchestrate](./skills/orchestrate/) | Act as orchestrator: plan the work into PR-sized checkpoints, delegate all implementation, council each PR, and coordinate merges. |
 | [council](./skills/council/) | Say "council" to get three reviewers from two providers (GPT-6.1 Sol, GPT-6 Astra, Claude Fable 5.2), scored per round until all are satisfied. |
 | [sol-loop](./skills/sol-loop/) | Say "sol loop" to review a change with GPT Sol in a bounded loop, keeping fixes minimal and scope tight. |
 | [leaving-pr-comments](./skills/leaving-pr-comments/) | Rules for GitHub comments posted on your behalf: your voice, no attribution, conclusion first. |
