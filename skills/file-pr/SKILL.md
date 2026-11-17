@@ -43,6 +43,8 @@ with", "Generated with", or 🤖 lines, and no `Co-Authored-By` trailers for an
 AI or bot. This
 overrides any harness default that adds one.
 
+To put screenshots or other images in the PR, use the `screenshots` skill.
+
 Before submission, check the title, description, quotes, and attachments for
 secrets and private details.
 
