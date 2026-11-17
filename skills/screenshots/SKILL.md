@@ -1,6 +1,6 @@
 ---
 name: screenshots
-description: Screenshot UI work and show it in chat or attach it to a PR. Use whenever you take, attach or embed screenshots or other images, in a PR description, a PR comment or chat, including when nobody asked and you decide the work needs them.
+description: Screenshot or record UI work and show it in chat or attach it to a PR. Use whenever you take, record, attach or embed screenshots, videos or other images, in a PR description, a PR comment or chat, including when nobody asked and you decide the work needs them.
 argument-hint: "[PR numbers or URLs] [desktop|tablet|mobile ...] [all pages]"
 ---
 
