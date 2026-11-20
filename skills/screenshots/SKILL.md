@@ -13,7 +13,7 @@ Arguments: `$ARGUMENTS`
 Read three things from the request and arguments:
 
 - **Destination.** _PR_ when the request names a PR or says "attach" or "PR description"; for a PR, use the named PRs, else the thread's linked PRs (`list_thread_pull_requests`), else the current branch's PR, taking every layer of a stack. Otherwise _chat_.
-- **Viewports.** Exactly the ones the user names. Otherwise desktop and mobile, plus tablet when the app has a layout of its own between them.
+- **Viewports.** Exactly the ones the user names. Otherwise, for a web app, desktop and mobile, plus tablet when the app has a layout of its own between them; for a desktop app, one window at the size a new user gets.
 - **Screens.** With "all" or "every page", the whole route list of the app, read from the router or the pages directory. Otherwise the pages, states (hover, open menus, empty and error states) and flows the diff touches (`git diff <base>... --name-only`, or `gh pr diff <n> --name-only` for a PR). A PR whose diff changes nothing a user sees is _skipped_; record why ("#38 is API-only").
 
 Done when you have a destination, a viewport list, and a written screen list. For "all", the screen list is every route, so you can check it off.
@@ -22,12 +22,11 @@ Done when you have a destination, a viewport list, and a written screen list. Fo
 
 1. Launch the app at the head being shown (the `run` skill, or the repo's own launch instructions). Give pages realistic data, seeding it when they would otherwise be empty.
 2. Make a fresh directory with `mktemp -d` for the images.
-3. With `agent-browser`, capture each screen at each viewport:
-   - desktop `1440 900`
-   - tablet `820 1180`
-   - mobile `390 844`
+3. Capture each screen at each viewport:
+   - **Web app:** with `agent-browser`, at desktop `1440 900`, tablet `820 1180`, mobile `390 844`. Use `--full` for pages taller than the viewport.
+   - **Desktop app:** screenshot the app's window rather than the whole screen, with the repo's own capture tooling when it has one, else the platform's (`screencapture -l <window id>` on macOS, `import -window <id>` on X11). Run it on a throwaway profile or data directory so the user's real data stays out of the images.
 
-   Use `--full` for pages taller than the viewport. Capture interactive states once, at the size where they read best.
+   Capture interactive states once, at the size where they read best. Record a video as well when the change is about motion or timing.
 4. When the user asks for a before and after, also capture each screen on the base branch at the same viewport: a **before** for each **after**.
 5. Open every image and look at it: real content loaded, the state you meant, no error toast, nothing clipped, and different from its neighbours. Two images of the same page under different names is a miss.
 
@@ -36,7 +35,7 @@ Done when every screen on the list has an image at every viewport, and you have 
 ## 3. Deliver
 
 - **Chat:** embed each image with Markdown image syntax and its absolute path, under a heading naming the screen and viewport. Put a before directly above its after.
-- **PR:** upload with `gh` (flags: https://docs.github.com/api/article/body?pathname=/en/github-cli/github-cli/attaching-files-with-github-cli). Write the images into the PR description under a `## Screenshots` heading as a table: one row per screen and viewport, with `Before | After` columns when you have befores, labels in the table rather than on the images. When the description already has a `## Screenshots` section, replace it whole; a PR shows one current set. Under the table, note the commit the images show: `Captured at <short sha>`.
+- **PR:** attach with `gh pr create` or `gh pr edit`, passing one `--attach <path>` per file, and refer to each file in the body with Markdown image syntax and that same path (`![after](./after.png)`); gh uploads them and swaps in `github.com/user-attachments` URLs. For a comment, use `gh pr comment --attach`. PR attachments are the only place images go, even when other PRs in the repo link images from a branch. If `--attach` says it needs write access, show the images in chat and tell the user to drag them into the PR. Write the images into the PR description under a `## Screenshots` heading as a table: one row per screen and viewport, with `Before | After` columns when you have befores, labels in the table rather than on the images. When the description already has a `## Screenshots` section, replace it whole; a PR shows one current set. Under the table, note the commit the images show: `Captured at <short sha>`.
 
 ## 4. Report
 

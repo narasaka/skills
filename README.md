@@ -17,7 +17,7 @@ npx skills add narasaka/skills --skill dotenvx
 | Skill | Description |
 |-------|-------------|
 | [dotenvx](./skills/dotenvx/) | Authoritative CLI reference for [dotenvx](https://dotenvx.com) — encrypt .env files, inject env vars into any process, manage multi-environment secrets, and configure CI/CD pipelines with encrypted env files. |
-| [screenshots](./skills/screenshots/) | Screenshot UI work at desktop and mobile and show it in chat, or attach it to the PR as one current set. |
+| [screenshots](./skills/screenshots/) | Screenshot web or desktop UI work and show it in chat, or attach it to the PR with `gh --attach` as one current set. |
 | [ticket](./skills/ticket/) | Start a Linear ticket on its Linear branch, solve the problem rather than the ticket's proposed fix, and ship with `full-stop`. |
 | [weigh-comments](./skills/weigh-comments/) | Check a teammate's review comments against the code, give each a verdict, and draft replies for you to send. |
 | [full-send](./skills/full-send/) | Say "full send" to hand off a task end to end: prove the change, review it with `sol-loop`, file the PR, babysit it, and merge once the merge gate passes. |
